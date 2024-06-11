@@ -1,14 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JOGO FÓRMULA-E</title>
+    <title>Super Mario</title>
+    <link rel="stylesheet" href="./css/estilo.css">
+    <link rel="shourtcut icon" href="./img/icon.png">
 </head>
 <body>
-    
 
+    <div class="game-board">
+        
+        <button id="game-over">GAME OVER</button>
+        <img src="./img/pista de fundo.png" class="clouds">
 
-    <script src="src/js/script.js"></script>
+        <img src="./img/mario.png" class="mario">
+        <img src="./img/atackmode.png" class="pipe"> 
+        <audio src="./audios/atack_mode_sound.mp3" id="audio"></audio>
+        <audio src="./audios/maro-jump-sound-effect_1.mp3" id="audio-jump"></audio>
+        <audio src="./audios/mario_OonFijd.mp3" id="soundtrack"></audio>
+
+        <div id="score">0</div>
+              
+    </div>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
