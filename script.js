@@ -5,19 +5,43 @@ const audio = document.querySelector("#audio");
 const audioJump = document.querySelector("#audio-jump");
 const soundtrack = document.querySelector("#soundtrack")
 
+addEventListener('keydown', function(event){
+    const newDirect = event.keyCode;
+    if(newDirect == 87){
+        up = true
+        mario.classList.add("up")
+        mario.classList.remove("removeup")
+        mario.classList.remove("down")
+        mario.classList.remove("removedown")
+
+    }
+    if(newDirect == 83){
+        down = true
+        mario.classList.add("down")
+        mario.classList.remove("removedown")
+        mario.classList.remove("up")
+        mario.classList.remove("removeup")
+    }
+})
+addEventListener('keyup', function(event){
+    const newDirect = event.keyCode
+    if(newDirect == 87){
+        up = false
+        mario.classList.add("removeup")
+        
+        
+    }
+    if(newDirect == 83){
+        down = false
+        mario.classList.add("removedown")
+        
+    
+    }
+})
 
 
-const jump = () => {
-    mario.classList.add("jump")
 
-    setTimeout(() => {
-        mario.classList.remove("jump")
-    },500);
 
-   audioJump.play()  
-}
-
-document.addEventListener('keydown', jump)
 
 const loop = setInterval(() => {
 

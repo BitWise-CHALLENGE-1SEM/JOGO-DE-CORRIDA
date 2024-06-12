@@ -24,14 +24,29 @@
 
 .mario{
     position: absolute;
-    bottom: 0px;
+    bottom: 200px;
     width: 150px;
     
 }
-
-.jump{
-    animation: jump 500ms ease-in-out;
+.up{
+    animation: up 500ms ease-out;
+    margin-bottom: +200px;
 }
+.down{
+    animation: down 500ms ease-out;
+    margin-bottom: -200px;
+}
+.removeup{
+    animation: reverseup 500ms ease-out;
+    margin-bottom: 0px;
+}
+.removedown{
+    animation: reversedown 500ms ease-out;
+    margin-bottom: 0px;
+}
+/*.jump{
+    animation: jump 500ms ease-in-out;
+}*/
 
 .clouds{
     position: absolute;
@@ -72,7 +87,39 @@
         right: 100%;
     }
 }
-
+@keyframes up {
+    from{
+        margin-bottom: 0px;
+    }
+    to{
+        margin-bottom: +200px;
+    }
+}
+@keyframes reverseup {
+    from{
+        margin-bottom: +200px;
+    }    
+    to{
+        margin-bottom: 0px;
+    }
+}
+@keyframes down {
+    from{
+        margin-bottom: 0px;
+    }
+    to{
+        margin-bottom: -200px;
+    }
+}
+@keyframes reversedown {
+    from{
+        margin-bottom: -200px;
+    }
+    to{
+        margin-bottom: 0px;
+    }
+}
+/*
 @keyframes jump {
     0%{
         bottom: 0;
@@ -93,7 +140,7 @@
     100%{
         bottom: 0;
     }
-}
+}*/
 
 @keyframes clouds-animation{
     from{
